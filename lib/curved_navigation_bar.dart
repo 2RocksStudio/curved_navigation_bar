@@ -16,7 +16,6 @@ class CurvedNavigationBar extends StatefulWidget {
   final Curve animationCurve;
   final Duration animationDuration;
   final double height;
-  final BoxDecoration boxDecoration;
 
   CurvedNavigationBar(
       {Key key,
@@ -29,8 +28,7 @@ class CurvedNavigationBar extends StatefulWidget {
       _LetIndexPage letIndexChange,
       this.animationCurve = Curves.easeOut,
       this.animationDuration = const Duration(milliseconds: 600),
-      this.height = 75.0,
-      this.boxDecoration})
+      this.height = 75.0})
       : letIndexChange = letIndexChange ?? ((_) => true),
         assert(items != null),
         assert(items.length >= 1),
@@ -118,13 +116,13 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
                   -(1 - _buttonHide) * 80,
                 ),
                 child: Material(
+                  elevation: 5,
                   color: widget.buttonBackgroundColor ?? widget.color,
                   type: MaterialType.circle,
                   child: Container(
                       child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: _icon,
-                    decoration: widget.boxDecoration,
                   )),
                 ),
               ),
