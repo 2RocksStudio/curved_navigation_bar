@@ -22,15 +22,6 @@ class NavButton extends StatelessWidget {
           onTap(index);
         },
         child: Container(
-            decoration: BoxDecoration(
-              boxShadow: <BoxShadow>[
-                BoxShadow(
-                    color: Colors.black54,
-                    blurRadius: 15.0,
-                    offset: Offset(0.0, 0.75))
-              ],
-              // color: Colors.blue
-            ),
             height: 75.0,
             child: Transform.translate(
               offset: Offset(
